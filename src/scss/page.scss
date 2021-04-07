@@ -1,0 +1,16 @@
+@import "normalize";
+@import "headerStyle";
+@import "popUp";
+@import "inputs";
+
+* {
+  font: $normal-text;
+}
+
+button {
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}

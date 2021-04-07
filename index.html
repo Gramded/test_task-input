@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./dist/css/page.css">
+    <script defer src="dist/bundle.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="btn-pop-up-block">
+            <button class="btn-help" data-parrent="modal-window" onclick="openPopUp()">Модальное окно?</button>
+        </div>
+    </header>
+<!--____________Pop-up_______________________-->
+    <div class="pop-up-window" id="success">
+        <p>Ваша заявка приянта!</p>
+    </div>
+    <div class="pop-up-window" id="error">
+        <p>Ваша заявка отклонена</p>
+    </div>
+    <div class="pop-up-window" id="modal-window">
+
+        <label for="nickname-input-reg" class="input-coloumn">
+
+            <span>
+               Введите Имя
+            </span>
+            <input data-name="save" data-status="0" type="text" id="nickname-input-reg" placeholder="Тут вводить Имя" onchange="isValid()">
+        </label>
+
+        <label for="email-input-reg" class="input-coloumn">
+
+            <span>
+                Введите email
+            </span>
+            <input data-name="save" data-status="0" type="email" id="email-input-reg" placeholder="Сюда можно вписать Email" onchange="isValid()">
+        </label>
+        <label for="test-mask" class="input-coloumn">
+            <span>
+               Введите телефон
+            </span>
+            <input data-name="save" data-status="0" type="text" id="test-mask" data-tel="true" onchange="phoneFun()">
+        </label>
+        <label for="test-mask" class="input-coloumn">
+            <span>
+               Ваше сообщение
+            </span>
+            <textarea data-name="save" data-status="0" type="text" id="message-area" onchange="isValid()"></textarea>
+        </label>
+        <Button onclick="saveInfo()" value="save" class="btn-help btn-help_static" data-parrent="modal-window">Сохранить</Button>
+    </div>
+</body>
+</html>

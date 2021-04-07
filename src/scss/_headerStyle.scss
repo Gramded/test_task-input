@@ -1,0 +1,16 @@
+@import "normalize/variables";
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: max-content;
+  .btn-pop-up-block {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+  }
+}
+
+
+
